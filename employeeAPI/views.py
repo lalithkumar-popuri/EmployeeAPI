@@ -35,6 +35,7 @@ class CreateEmployeView(APIView):
             return Response({"message": "Invalid body request", "success": False}, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
             return Response({"message": "Employee creation failed", "success": False}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
 
 class ListEmployeView(APIView):
     def get(self,request,regid = None):
